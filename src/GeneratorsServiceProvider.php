@@ -39,6 +39,25 @@ class GeneratorsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->initHelpers();
+    }
+
+
+    protected function initHelpers() {
+
+        if ( !function_exists('str_contains') )
+        {
+            function str_contains($heystack, $needles){
+                return \Illuminate\Support\Str::contains($heystack, $needles);
+            }
+        }
+
+        if ( !function_exists('str_plural') )
+        {
+            function str_plural($value, $count = 2){
+                return \Illuminate\Support\Str::plural($value, $count);
+            }
+        }
+
     }
 }
