@@ -26,7 +26,7 @@ class RouteService extends ServiceAbstract implements ServiceInterface
 
     private function getRouteString()
     {
-        return 'CRUD::resource(\'' . $this->naming->getName() . '\', \'' . $this->command->naming['crudController']->getClassName() . '\');';
+        return 'Route::crud(\'' . $this->naming->getName() . '\', \'' . $this->command->naming['crudController']->getClassName() . '\');';
     }
 
     private function addRoute($routeFile)
