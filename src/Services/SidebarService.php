@@ -28,9 +28,9 @@ class SidebarService extends ServiceAbstract implements ServiceInterface
     {
         return <<<FILE
 
-<li>
-    <a href="{{ backpack_url('{$this->command->naming['routeFile']->getName()}') }}">
-        <i class="fa fa-question"></i><span>{{ trans('models.{$this->command->naming['languageFile']->getName()}.plural') }}</span>
+<li class="nav-item">
+    <a class="nav-link" href="{{ backpack_url('{$this->command->naming['routeFile']->getName()}') }}">
+        <i class="nav-icon fa fa-question"></i><span>{{ trans('models.{$this->command->naming['languageFile']->getName()}.plural') }}</span>
     </a>
 </li>
 FILE;
